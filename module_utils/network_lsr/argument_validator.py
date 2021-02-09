@@ -7,8 +7,10 @@ import socket
 import re
 
 # pylint: disable=import-error, no-name-in-module
-from ansible.module_utils.network_lsr import MyError  # noqa:E501
-from ansible.module_utils.network_lsr.utils import Util  # noqa:E501
+# fmt: off
+from ansible.module_utils.network_lsr import MyError
+from ansible.module_utils.network_lsr.utils import Util
+# fmt: on
 
 UINT32_MAX = 0xFFFFFFFF
 

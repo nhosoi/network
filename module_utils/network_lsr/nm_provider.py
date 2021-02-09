@@ -2,7 +2,9 @@
 """ Support for NetworkManager aka the NM provider """
 
 # pylint: disable=import-error, no-name-in-module
-from ansible.module_utils.network_lsr.utils import Util  # noqa:E501
+# fmt: off
+from ansible.module_utils.network_lsr.utils import Util
+# fmt: on
 
 ETHTOOL_FEATURE_PREFIX = "ETHTOOL_OPTNAME_FEATURE_"
 ETHTOOL_COALESCE_PREFIX = "ETHTOOL_OPTNAME_COALESCE_"

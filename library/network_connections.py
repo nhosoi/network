@@ -14,18 +14,20 @@ import traceback
 import logging
 
 # pylint: disable=import-error, no-name-in-module
+# fmt: off
 from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.network_lsr import ethtool  # noqa:E501
-from ansible.module_utils.network_lsr import MyError  # noqa:E501
+from ansible.module_utils.network_lsr import ethtool
+from ansible.module_utils.network_lsr import MyError
 
-from ansible.module_utils.network_lsr.argument_validator import (  # noqa:E501
+from ansible.module_utils.network_lsr.argument_validator import (
     ArgUtil,
     ArgValidator_ListConnections,
     ValidationError,
 )
 
-from ansible.module_utils.network_lsr.utils import Util  # noqa:E501
-from ansible.module_utils.network_lsr import nm_provider  # noqa:E501
+from ansible.module_utils.network_lsr.utils import Util
+from ansible.module_utils.network_lsr import nm_provider
+# fmt: on
 
 # pylint: enable=import-error, no-name-in-module
 
@@ -1877,8 +1879,9 @@ class Cmd_nm(Cmd):
         self.validate_one_type = ArgValidator_ListConnections.VALIDATE_ONE_MODE_NM
         self._checkpoint = None
         # pylint: disable=import-error, no-name-in-module
-        from ansible.module_utils.network_lsr.nm import provider  # noqa:E501
-
+        # fmt: off
+        from ansible.module_utils.network_lsr.nm import provider
+        # fmt: on
         # pylint: enable=import-error, no-name-in-module
 
         self._nm_provider = provider.NetworkManagerProvider()

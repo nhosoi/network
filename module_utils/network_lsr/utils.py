@@ -7,14 +7,18 @@ import sys
 import uuid
 
 # pylint: disable=import-error, no-name-in-module
-from ansible.module_utils.network_lsr import MyError  # noqa:E501
+# fmt: off
+from ansible.module_utils.network_lsr import MyError
+# fmt: on
 
 
 class Util:
 
     PY3 = sys.version_info[0] == 3
 
-    STRING_TYPE = str if PY3 else basestring  # noqa:F821
+    # fmt: off
+    STRING_TYPE = str if PY3 else basestring
+    # fmt: on
 
     @staticmethod
     def first(iterable, default=None, pred=None):
